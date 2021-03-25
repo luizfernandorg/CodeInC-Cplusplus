@@ -1,0 +1,46 @@
+3.1
+a) class
+b) .h
+c) type and name
+d) property(wrong) data member is corret answer
+e) access specifier
+f) void
+g) getline
+h) :: (scope resolution operator
+i) #include
+
+3.2
+a) f
+b) v
+c) f(wrong) v is the corret answer
+d) f
+e) v
+f) f(wrong) v is the corret answer
+g) v
+
+3.3
+Local variables are limited by its function scope and can't be accessed from any other function, 
+different from data members that live in the instance scope and are acessible from any member-function
+
+3.4
+parameter specify the type of argument are necessary for the function task, arguments are the values passed to parameters int the function
+
+3.5
+function prototype stablish the signature of a member-function, and function definition is the boby of the prototype having the same signature as the function prototype
+
+3.6
+the default contructor is called everytime an instance of the class is created, and it is not necessary to declare a constructor, when is define a constructor, the data members can be initialized using a member initiliazer ":" followed by the data member name and its new value surranded by parentheses
+
+3.7
+Data member store the value used by the instance object, it is initialized generally by a constructor, or updated by a setter member function.
+
+3.8
+Header generally will store the class declarations, macros and type definitions and functions declarations, a source-code files will have the definitions for funcions and class member functions.
+
+3.9
+the use of cout, cin, cerr or even string, we need to stablish the namespace follow byt :: and than the name, in this case we use std::[name], like std::string.
+
+3.10
+set functions are used for initiate or update the data member, having some type of verification before update the data member
+
+3.11

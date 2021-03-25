@@ -1,0 +1,220 @@
+﻿A C++ Programs go through six phases: Edit, Preprocess, Compile, Link,
+load and execute.
+1) Edit:
+        Edit the file(Source code) in the text editor or IDE extensions used by the 
+        source code: .cpp, .cxx, .cc, .C (C in uppercase to indicate this is a C++ file) 
+        in the compiler documentation there is an explanation for which extension it use.
+2) Preprocessing:
+        Preprocessing are directives given by the source code to the compiler, that indicates some manipulations are necessary
+        Like the #include directive that indicates to the compiler to replace that directive by the source code in headers and C++ code
+3) Compile:
+        Converte a C++ source code to an Object
+4) Linking:
+        In the link process all the headers and source codes, used in the project, are put together to generate one single 
+        the file that is the program itself, and executable software
+5) Load:
+        When the program is load, it is put in memory and also the libraries used by the software.
+6) Execute:
+        The CPU executes the program one instruction at a time. Some errors can occur in some moments than is a need to edit the code e go through all the processes again.
+        C++ have to input and output data, to input data, use the std::cin >> ... (directing normally to keyboard, but can be redirected to another device)
+        C++ output data using the std::cout << ... (normally the keyboard, but also can redirect to another device) to print an error can be used std::cerr
+
+
+When the program runs then an error occurs is called a "Runtime Error" or "Execution-Time Error"
+        
+"Fatal Runtime Error" cause program to crash(terminate)
+
+
+"Nonfatal Runtime Error", the program executes but with some possible wrong results
+
+
+std is a namespace in C++ and cout, cin and cerr are names that belong to std namespace
+this way to use one of those names we need to do this:
+
+
+        std::cout
+        std::cin
+        std::cerr
+
+
+but using the keyword using we can avoid use std::cout, like so:
+        using namespace std;  //Using diretive
+or:
+        using std::cout; // Using declaration;
+
+
+but is a good practice not use this, because if you have more than one namespace with the same name inside
+this could cause a problem, so try to use always namespace::name like std::cout;
+
+
+Escape sequence
+\n                a new line
+\t                a horizontal tab
+\r                Carriage return, position the cursor to the current line
+\a                Alert, sound the system bell
+\\                scape a \ on screen
+\'                scape a single quote
+\"                scape a double qoute
+
+
+the return statement in the final the main function is optional
+
+
+Use identifiers of 31 characters or fewer to ensure portability.
+
+
+Do not use identifiers that begin with underscores and double underscores, the compiler may use a similar identifier.
+
+
+Avoid using abbreviations in identifiers. This improves program readability.
+
+
+some fundamental types: double, bool, int, char
+
+
+the std::cin, is a standard input stream object cin of namespace std
+
+
+and the stream extraction operator >> obtain the value inside the variable positioned on the right side of the operator.
+
+
+Using multiple stream insertion operators (<<) in a single statement is referred to as concatenating, chaining or cascading stream insertion operations.
+
+
+The stream insertion operator << insert the value on the right’s side of the operator.
+
+
+the assigment operator “=” on “int number1 = 0;” assign the value 0 to number1.
+
+
+the “=” and “+” operator is called a binary operator.
+
+
+Using multiple stream insertion operators (<<) in a single statement is referred to as concatenating, chaining, or cascading stream insertion operations.
+when a value is placed in a variable it replaces the previous value, this is called a “destructive” operation.
+
+
+“nondestructive” operation occurs when the value is read from the memory.
+
+
+
+
+Arithmetic operations:
+
+
+Operation                        Arithmetic        Algebriac                C++ 
+                                Operator        Expression                Expression
+
+
+Addition                        +                 f + 7                   f + 7
+Subtraction                     -                 p – c                   p - c
+Multiplication                  *                 bm or b ⋅ m              b * m
+Division                        /                 x / y or or x ÷ y        x / y
+Modulus                         %                 r mod s                  r % s
+
+
+The modulus operator “%” only can be used with integers operands. The expression x%y yields
+the remainder after x is divided by y.
+
+
+Precedence of Operators:
+1º Parentheses are evaluated first.
+2º Multiplication, division, and modulus operations are applied next.
+3º Addition and subtraction operations are applied last.
+
+
+Operator(s) in order of evaluation (precedence)
+( )
+*
+/
+%
+
+
++
+-
+
+
+Relational Operators:
+>
+<
+>=
+<=
+Equality Operators:
+==
+!=
+
+
+A compound statement or block is when creating one or more statements inside the brackets {...}
+
+
+some programmers use the directive “using” as in “using namespace std” to use all the names inside std namespace inside of the “iostream” header
+
+
+Operator Precedence:
+()
+/ * %
++ -
+<< >>
+< <= > >=
+== !=
+=
+
+
+the  “static_cast<type>(value)” gives us the converted type of value
+
+
+### 3.1 - Introduction to Classes
+
+### 3.2 Defining a class with a member function
+
+        //in the class name, the first letter of each word is written with a capital letter
+        class GradeBook{ // class definition
+        public: // here is define a public specifier block, everything that follows bellow is a public member of the class
+                // this function member, has a camel case style on its name, the second word has the first letter in capital
+                void gradeMessage() const // this line is commonly referred as a function header
+                                        // the method follow by the const keyword indicates to compiler 
+                                        //that this method doesn't modify the object, like properties for example
+                {
+                        std::cout << "Grade Message" << std::endl;
+                }
+        };
+        const objects can only call const members
+
+                const GradeBook g;  // the GradeBook here is a user-defined type
+                GradeBook.gradeMessage()
+
+        to call a method member of a class is necessary to create an object of it, static members are an exception
+
+### 3.3 Defining a Member Function with a Parameter
+
+        You can define new class types as needed; this is one reason why C++ is known as an "extensible programming language".
+
+        #include <string>
+                std::string var;
+        std::getline( stream, var); stream is the origin of caracters ex. std::cin, and the var is where to store the whole line 
+
+        we call the method displayMessage(var) passing the course name to the method, copying the value stored in the variable var
+        the method displayMessage(std:string nameOfCourse); receives a copied string as a parameter
+
+        ### 3.4 Data Members, set Member Functions and get Member Functions
+
+        variables declared in the class, are called "data members"
+
+        const function member only can call internally const functions member
+        set function member is known as mutators because they change the value of a property
+        get function member are call as accessors
+
+### 3.5 - Initializating Objects with Contructors
+        constructor need to have the same name of the class definition
+        make research for explanation about explicit keyword?
+        ...
+        public:
+                explicit GradeBook(std::string name) : courseName(name) {}
+        ...
+        the : followed by the name of data member with the parameter name inside parentheses to Initialize the data member
+
+### 3.6 Placing a Class in a Separate File for Reusability
+        to Reusability of the class is commonly to define the class inside a header file.
+        headers can use the using keyword, this why is always use std::
+
+        Additional Software Engineering Issues - page 86
